@@ -43,33 +43,58 @@
 // }
 
 
-// 2
+// // 2
+// #include <stdio.h>
+
+// double CelToFah(double c)
+// {
+//     return 1.8*c+32;
+// }
+
+// double FahToCel(double f)
+// {
+//     return (f-32)/1.8;
+// }
+
+// int main(void)
+// {
+//     int choice;
+//     double temp;
+//     printf("섭씨는 1, 화씨는 2. 선택 :");
+//     scanf("%d", &choice);
+//     printf("기온을 입력 :");
+//     scanf("%lf", &temp);
+//     if (choice==1)
+//         printf("화씨 기온은 %f. \n", CelToFah(temp));
+//     else if (choice==2)
+//         printf("섭씨 기온은 %f. \n", FahToCel(temp));
+//     else
+//         printf("잘못 선택!");
+//     return 0;
+// }
+
+// 3
 #include <stdio.h>
 
-double CelToFah(double c)
+int Fibonacci(int a, int b)
 {
-    return 1.8*c+32;
-}
-
-double FahToCel(double f)
-{
-    return (f-32)/1.8;
+    int result;
+    return result=a+b;
 }
 
 int main(void)
 {
-    int choice;
-    double temp;
-    printf("섭씨는 1, 화씨는 2. 선택 :");
-    scanf("%d", &choice);
-    printf("기온을 입력 :");
-    scanf("%lf", &temp);
-    if (choice==1)
-        printf("화씨 기온은 %f. \n", CelToFah(temp));
-    else if (choice==2)
-        printf("섭씨 기온은 %f. \n", FahToCel(temp));
-    else
-        printf("잘못 선택!");
+    int num;
+    int a=0, b=1, result;
+    printf("숫자 입력 :");
+    scanf("%d", &num);
+    printf("0, 1, ");
+    for (; num>2; num--)
+    {
+        result = Fibonacci(a, b);
+        printf("%d, ", result);
+        a=b;
+        b=result;
+    }
     return 0;
 }
-
